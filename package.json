@@ -1,0 +1,93 @@
+{
+  "name": "voice-automation-platform",
+  "version": "3.0.0",
+  "description": "Enterprise-grade voice automation platform with AI-powered call flows using Twilio Voice API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon --watch src --exec node index.js",
+    "test": "jest --coverage --detectOpenHandles",
+    "test:integration": "jest --testPathPattern=integration --runInBand",
+    "lint": "eslint . --ext .js",
+    "format": "prettier --write \"**/*.{js,json,md}\"",
+    "migrate": "node scripts/migrate.js",
+    "seed": "node scripts/seed.js",
+    "build": "webpack --mode production",
+    "docker:build": "docker build -t voice-platform .",
+    "docker:run": "docker-compose up -d",
+    "pm2:start": "pm2 start ecosystem.config.js",
+    "metrics": "node scripts/metrics.js",
+    "analyze": "node scripts/analyze.js"
+  },
+  "keywords": [
+    "twilio",
+    "voice",
+    "automation",
+    "telephony",
+    "ivr",
+    "call-center",
+    "enterprise",
+    "saas",
+    "api",
+    "real-time",
+    "websocket",
+    "redis",
+    "mongodb"
+  ],
+  "author": "iluminat1scode",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "twilio": "^4.19.0",
+    "mongoose": "^7.6.3",
+    "ioredis": "^5.3.2",
+    "bull": "^4.11.4",
+    "ws": "^8.14.2",
+    "dotenv": "^16.3.1",
+    "helmet": "^7.0.0",
+    "cors": "^2.8.5",
+    "compression": "^1.7.4",
+    "express-rate-limit": "^7.1.3",
+    "winston": "^3.11.0",
+    "prom-client": "^15.0.0",
+    "@sentry/node": "^7.77.0",
+    "moment-timezone": "^0.5.43",
+    "uuid": "^9.0.1",
+    "bcrypt": "^5.1.1",
+    "jsonwebtoken": "^9.0.2",
+    "joi": "^17.11.0",
+    "axios": "^1.6.0",
+    "node-cron": "^3.0.3",
+    "lodash": "^4.17.21",
+    "async": "^3.2.5",
+    "p-queue": "^7.4.1",
+    "retry": "^0.13.1",
+    "ms": "^2.1.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "jest": "^29.7.0",
+    "supertest": "^6.3.3",
+    "eslint": "^8.52.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "prettier": "^3.0.3",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.0.2",
+    "@types/node": "^20.8.10",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "pm2": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iluminat1scode/voice-automation-platform"
+  },
+  "bugs": {
+    "url": "https://github.com/iluminat1scode/voice-automation-platform/issues"
+  },
+  "homepage": "https://github.com/iluminat1scode/voice-automation-platform#readme"
+}
