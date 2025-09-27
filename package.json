@@ -1,6 +1,6 @@
 {
   "name": "voice-automation-platform",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Enterprise-grade voice automation platform with AI-powered call flows using Twilio Voice API",
   "main": "index.js",
   "scripts": {
